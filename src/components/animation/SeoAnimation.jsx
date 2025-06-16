@@ -30,7 +30,7 @@ export default function AutomAnime() {
           key={index}
           src={src}
           alt={`Slide ${index}`}
-          className={`absolute p-2 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+          className={`absolute p-2 w-[80vw] h-[90vh] object-cover transition-opacity duration-1000 ease-in-out ${
             index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'
           }`}
         />

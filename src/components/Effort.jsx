@@ -2,61 +2,88 @@ import React from "react";
 import SeoAnimation from "./animation/SeoAnimation";
 
 export default function Effort() {
-      return (
-            <div className="h-[115vh] w-full flex flex-col bg-[#f5f7fa]">
-            <div className="flex items-center relative justify-center">
-                  <div className="absolute h-50 w-50 p-10 bg-[rgba(204,165,255,0.75)] rounded-full top-7 -left-10"/>
-                  <div className="absolute h-50 w-50 p-10 bg-[rgba(204,165,255,0.75)] rounded-full bottom-8 left-125"/>
-                  <div className="h-full w-full flex justify-center items-center">
-                        <div className=" h-[70%] w-[70%] z-2 rounded-2xl shadow-[-4px_4px_8px_rgba(0,0,1,0.75)] bg-white">
-                              <SeoAnimation />
-                        </div>
-                  </div>
-                  <div className=" h-full w-full py-5 px-20">
-                        <div className="mb-18">
-                              <h1 className="text-5xl text-gray-900 font-extrabold">Less Effort More<br />Power</h1>
-                        </div>
-                        <div className="mb-8">
-                              <h1 className="text-4xl text-emerald-500 font-extrabold mb-5">
-                                    SEO Management
-                              </h1>
-                              <h4 className="text-2xl text-gray-500 font-medium">
-                                    Helps your store show up on Google. Add titles,
-                                    <br />
-                                    Descriptions, and keywords—no expert needed. More
-                                    <br />
-                                    Visibility, more traffic.
-                              </h4>
-                        </div>
-                        <div className="mb-8">
-                              <h1 className="text-4xl text-emerald-500 font-extrabold mb-5">
-                                    Bulk Product Upload
-                              </h1>
-                              <h4 className="text-2xl text-gray-500 font-medium">
-                                    Upload hundreds of products at once using Excel. Add
-                                    <br />
-                                    Details like price, size, color, and discounts—all in one
-                                    <br />
-                                    Go.
-                              </h4>
-                        </div>
-                        <div className="mb-8">
-                              <h1 className="text-4xl text-emerald-500 font-extrabold mb-5">
-                                    Role-Based Access Control
-                              </h1>
-                              <h4 className="text-2xl text-gray-500 font-medium">
-                                    Give the right access to the right team members.
-                                    <br />
-                                    Control who can edit products, view orders, or manage
-                                    <br />
-                                    Settings—secure and simple.
-                              </h4>
-                        </div>
-                  </div>
-            </div>
-            <button className="block mx-auto px-4 py-2 w-60 h-10 mb-4 rounded-full bg-gradient-to-b from-emerald-400 to-emerald-600 text-white font-bold text-sm shadow-lg hover:scale-105 transition-transform duration-200">
-                  Compare With Other Platform
-            </button>
-            </div>
-      );
+  return (
+    <div className="min-h-[110vh] w-full bg-[#f4f5f7] flex flex-col items-center px-[clamp(1rem,4vw,3rem)] py-[clamp(4rem,8vh,6rem)]">
+      {/* Wrapper with responsive direction */}
+      <div className="flex flex-col lg:flex-row-reverse w-full h-full relative items-center justify-center gap-[clamp(2rem,5vw,4rem)]">
+        {/* Text Section - Right on desktop, Top on mobile */}
+        <div className="w-full lg:w-1/2 px-[clamp(1rem,4vw,2rem)] py-[clamp(1rem,4vh,2rem)]">
+          <h1 className="text-[clamp(2rem,4vw,3rem)] text-gray-900 font-extrabold mb-[clamp(1.2rem,2vh,2rem)] leading-tight">
+            Less Effort More Power
+          </h1>
+
+          {/* Block 1 */}
+          <div className="mb-[clamp(1.2rem,2vh,2rem)]">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] text-emerald-500 font-extrabold mb-3">
+              SEO Management
+            </h2>
+            <p className="text-[clamp(1rem,1.5vw,1.25rem)] text-gray-500 font-medium leading-relaxed">
+              Helps your store show up on Google. Add titles,
+              <br className="sm:hidden" />
+              descriptions, and keywords—no expert needed.
+              <br className="sm:hidden" />
+              More visibility, more traffic.
+            </p>
+          </div>
+
+          {/* Block 2 */}
+          <div className="mb-[clamp(1.2rem,2vh,2rem)]">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] text-emerald-500 font-extrabold mb-3">
+              Bulk Product Upload
+            </h2>
+            <p className="text-[clamp(1rem,1.5vw,1.25rem)] text-gray-500 font-medium leading-relaxed">
+              Upload hundreds of products at once using Excel.
+              <br className="sm:hidden" />
+              Add details like price, size, color, and discounts—
+              <br className="sm:hidden" />
+              all in one go.
+            </p>
+          </div>
+
+          {/* Block 3 */}
+          <div className="mb-[clamp(1.2rem,2vh,2rem)]">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] text-emerald-500 font-extrabold mb-3">
+              Role-Based Access Control
+            </h2>
+            <p className="text-[clamp(1rem,1.5vw,1.25rem)] text-gray-500 font-medium leading-relaxed">
+              Give the right access to the right team members.
+              <br className="sm:hidden" />
+              Control who can edit products, view orders, or
+              <br className="sm:hidden" />
+              manage settings—secure and simple.
+            </p>
+          </div>
+        </div>
+
+        {/* Animation Section - Left on desktop, Bottom on mobile */}
+        <div className="relative w-full lg:w-1/2 h-[clamp(22rem,55vh,32rem)] flex items-center justify-center px-4">
+          {/* Top Circle */}
+          <div
+            className="absolute rounded-full bg-[rgba(204,165,255,0.75)] z-0
+              h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-44 xl:w-44
+              top-[-1rem] sm:top-[-2rem] md:top-[-2.5rem] lg:top-[-3rem] xl:top-[-10.5rem]
+              left-[-0.5rem] sm:left-[-1rem] md:left-[-1.5rem] lg:left-[-2rem] xl:left-[-2.5rem]"
+          />
+
+          {/* Bottom Circle */}
+          <div
+            className="absolute rounded-full bg-[rgba(204,165,255,0.75)] z-0
+              h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-44 xl:w-44
+              bottom-[-1.5rem] sm:bottom-[-2rem] md:bottom-[-2.5rem] lg:bottom-[-3rem] xl:bottom-[-10.5rem]
+              left-[80%] sm:left-[80%] md:left-[83%] lg:left-[78%] xl:left-[80%]"
+          />
+
+          {/* White Animation Box */}
+          <div className="h-[80vh] w-[87%] rounded-2xl bg-white shadow-[-4px_4px_8px_rgba(0,0,1,0.3)] z-10 flex items-center justify-center sm:mt-19 md:mt-3">
+            <SeoAnimation />
+          </div>
+        </div>
+      </div>
+
+      {/* Button */}
+      <button className="mt-30  sm:mt-30 px-6 py-3 w-fit rounded-full bg-gradient-to-b from-emerald-400 to-emerald-600 text-white font-bold text-sm shadow-lg hover:scale-105 transition-transform duration-200">
+        Compare With Other Platform
+      </button>
+    </div>
+  );
 }
