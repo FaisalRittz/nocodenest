@@ -4,16 +4,12 @@ import DragAnimation from "./animation/DragAnimation";
 export default function Dragdrop() {
   return (
     <div className="min-h-[80vh] w-full bg-[#f5f7fa] flex flex-col items-center px-[clamp(1rem,4vw,3rem)] py-[clamp(2rem,5vh,4rem)]">
-      {/* Heading */}
       <h2 className="text-[clamp(1.8rem,4vw,2.7rem)] text-emerald-500 font-extrabold text-center mb-[clamp(1.5rem,5vh,3rem)]">
         Why Choose No Code Nest?
       </h2>
 
-      {/* Content Wrapper */}
       <div className="flex flex-col lg:flex-row w-full h-full relative items-center justify-center gap-[clamp(2rem,5vw,4rem)]">
-        {/* Left Animation Box */}
         <div className="relative w-full lg:w-1/2 h-[clamp(22rem,55vh,32rem)] flex items-center justify-center px-4">
-          {/* Top Decorative Dot */}
           <div
             className="
               absolute rounded-full bg-[rgb(255,244,172)] z-0
@@ -23,7 +19,6 @@ export default function Dragdrop() {
             "
           />
 
-          {/* Bottom Decorative Dot */}
           <div
             className="
               absolute rounded-full bg-[rgb(255,244,172)] z-0
@@ -33,13 +28,11 @@ export default function Dragdrop() {
             "
           />
 
-          {/* White Box for Animation */}
           <div className="h-[85%] w-[90%] rounded-2xl bg-white shadow-[-4px_4px_8px_rgba(0,0,1,0.3)] z-10 flex items-center justify-center">
             <DragAnimation />
           </div>
         </div>
 
-        {/* Right Text Content */}
         <div className="w-full lg:w-1/2 px-[clamp(1rem,4vw,2rem)] py-[clamp(1rem,4vh,2rem)]">
           <div className="mb-[clamp(1rem,3vh,2rem)]">
             <h1 className="text-[clamp(2rem,4vw,2.8rem)] text-gray-900 font-extrabold">
@@ -50,8 +43,8 @@ export default function Dragdrop() {
           <div className="text-[clamp(1rem,2vw,1.3rem)] text-gray-500 font-medium space-y-[clamp(1rem,2vh,1.5rem)] leading-relaxed">
             <p>
               <span className="text-emerald-500 font-bold">•</span> Simply drag
-              sections like banners, products, or videos where you want
-              them—no code needed.
+              sections like banners, products, or videos where you want them—no
+              code needed.
             </p>
             <p>
               <span className="text-emerald-500 font-bold">•</span> Instantly

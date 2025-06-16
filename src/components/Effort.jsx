@@ -60,28 +60,28 @@ export default function Effort() {
           {/* Top Circle */}
           <div
             className="absolute rounded-full bg-[rgba(204,165,255,0.75)] z-0
-              h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-44 xl:w-44
-              top-[-1rem] sm:top-[-2rem] md:top-[-2.5rem] lg:top-[-3rem] xl:top-[-10.5rem]
-              left-[-0.5rem] sm:left-[-1rem] md:left-[-1.5rem] lg:left-[-2rem] xl:left-[-2.5rem]"
+              h-28 w-28 sm:h-36 sm:w-36 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-44 xl:w-44
+              top-[-3rem] sm:top-[-3.5rem] md:top-[-2.5rem] lg:top-[-10rem] xl:top-[-8.5rem]
+              left-[-0.5rem] sm:left-[-1rem] md:left-[-1.5rem] lg:left-[-2.6rem] xl:left-[-2.5rem]"
           />
 
           {/* Bottom Circle */}
           <div
             className="absolute rounded-full bg-[rgba(204,165,255,0.75)] z-0
-              h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-44 xl:w-44
-              bottom-[-1.5rem] sm:bottom-[-2rem] md:bottom-[-2.5rem] lg:bottom-[-3rem] xl:bottom-[-10.5rem]
-              left-[80%] sm:left-[80%] md:left-[83%] lg:left-[78%] xl:left-[80%]"
+              h-28 w-28 sm:h-36 sm:w-36 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-44 xl:w-44
+              bottom-[-12.5rem] sm:bottom-[-14rem] md:bottom-[-21rem] lg:bottom-[-14rem] xl:bottom-[-17.5rem]
+              left-[78%] sm:left-[80%] md:left-[83%] lg:left-[78%] xl:left-[80%]"
           />
 
           {/* White Animation Box */}
-          <div className="h-[80vh] w-[87%] rounded-2xl bg-white shadow-[-4px_4px_8px_rgba(0,0,1,0.3)] z-10 flex items-center justify-center sm:mt-19 md:mt-3">
+          <div className="h-[80vh] w-[87%] lg:w-[97%] lg:top-[-7rem] md:h-[90vh] xl:top-[-4rem] top-[0rem] absolute rounded-2xl bg-white shadow-[-4px_4px_8px_rgba(0,0,1,0.3)] z-10 flex items-center justify-center sm:mt-1 md:mt-3">
             <SeoAnimation />
           </div>
         </div>
       </div>
 
       {/* Button */}
-      <button className="mt-30  sm:mt-30 px-6 py-3 w-fit rounded-full bg-gradient-to-b from-emerald-400 to-emerald-600 text-white font-bold text-sm shadow-lg hover:scale-105 transition-transform duration-200">
+      <button className="mt-60  sm:mt-67 md:mt-77 px-6 py-3 w-fit rounded-full bg-gradient-to-b from-emerald-400 to-emerald-600 text-white font-bold text-sm shadow-lg hover:scale-105 transition-transform duration-200">
         Compare With Other Platform
       </button>
     </div>

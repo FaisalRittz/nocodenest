@@ -5,7 +5,7 @@ export default function Automation() {
   return (
     <div className="min-h-[80vh] w-full bg-[#f5f7fa] flex flex-col lg:flex-row items-center px-[clamp(1rem,4vw,3rem)] py-[clamp(2rem,5vh,4rem)] overflow-hidden">
 
-      {/* Left Text Content */}
+      
       <div className="w-full lg:w-1/2 flex flex-col justify-center">
         <div className="mb-[clamp(1rem,3vh,2rem)]">
           <h1 className="text-[clamp(2rem,4vw,2.8rem)] text-gray-900 font-extrabold">
@@ -29,9 +29,9 @@ export default function Automation() {
         </div>
       </div>
 
-      {/* Right Animation Box */}
+      
       <div className="relative w-full lg:w-1/2 h-[clamp(22rem,55vh,32rem)] flex items-center justify-center mt-10 lg:mt-0">
-        {/* Top Green Dot */}
+       
         <div
           className="absolute rounded-full bg-[rgba(211,255,185,0.85)] z-0
           h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-44 xl:w-44
@@ -39,7 +39,7 @@ export default function Automation() {
           right-[-0.5rem] sm:right-[-1rem] md:right-[-1.5rem] lg:right-[-2rem] xl:right-[-2.5rem]"
         />
 
-        {/* Bottom Green Dot */}
+        
         <div
           className="absolute rounded-full bg-[rgba(211,255,185,0.85)] z-0
           h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40 xl:h-44 xl:w-44
@@ -47,7 +47,7 @@ export default function Automation() {
           right-[80%] sm:right-[80%] md:right-[83%] lg:right-[78%] xl:right-[80%]"
         />
 
-        {/* White Animation Box */}
+       
         <div className="h-[85%] w-[90%] rounded-2xl bg-white shadow-[-4px_4px_8px_rgba(0,0,1,0.3)] z-10 flex items-center justify-center">
           <AutomAnime />
         </div>
