@@ -100,7 +100,7 @@ export default function Hero() {
         sm:h-[20vh] sm:w-[17vw] sm:top-[73vh]
         md:h-[29vh] md:w-[24vw] md:top-[44%]
         lg:h-[25vh] lg:w-[21vw] lg:top-[58%]
-        xl:h-[30vh] xl:w-[20vw] xl:top-[48%]">
+        xl:h-[30vh] xl:w-[15vw] xl:top-[48%]">
       </div>
 
       
@@ -109,7 +109,7 @@ export default function Hero() {
         sm:h-[20vh] sm:w-[17vw] sm:top-[105vh]
         md:h-[29vh] md:w-[24vw] md:top-[75%]
         lg:h-[25vh] lg:w-[21vw] lg:top-[97%] lg:left-0
-        xl:h-[30vh] xl:w-[20vw] xl:top-[87%]">
+        xl:h-[30vh] xl:w-[15vw] xl:top-[87%]">
       </div>
 
       
