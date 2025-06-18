@@ -97,19 +97,19 @@ export default function Hero() {
       
       <div className="absolute rounded-full bg-[#D3FFB9] z-0
         h-[15vh] w-[14vw] top-[62vh] right-[1vw]
-        sm:h-[20vh] sm:w-[22vw] sm:top-[73vh]
-        md:h-[27vh] md:w-[26vw] md:top-[44%]
-        lg:h-[31vh] lg:w-[15vw] lg:top-[58%]
-        xl:top-[48%]">
+        sm:h-[20vh] sm:w-[17vw] sm:top-[73vh]
+        md:h-[29vh] md:w-[24vw] md:top-[44%]
+        lg:h-[25vh] lg:w-[21vw] lg:top-[58%]
+        xl:h-[30vh] xl:w-[20vw] xl:top-[48%]">
       </div>
 
       
       <div className="absolute left-[1vw] rounded-full bg-[#D3FFB9] z-0
         h-[15vh] w-[14vw] bottom-[72vh]
-        sm:h-[20vh] sm:w-[22vw] sm:top-[105vh]
-        md:h-[29vh] md:w-[26vw] md:top-[75%]
-        lg:h-[31vh] lg:w-[15vw] lg:top-[97%] lg:left-0
-        xl:top-[87%]">
+        sm:h-[20vh] sm:w-[17vw] sm:top-[105vh]
+        md:h-[29vh] md:w-[24vw] md:top-[75%]
+        lg:h-[25vh] lg:w-[21vw] lg:top-[97%] lg:left-0
+        xl:h-[30vh] xl:w-[20vw] xl:top-[87%]">
       </div>
 
       
