@@ -8,7 +8,7 @@ import Testimonial from "./Testimonial";
 import Launch from "./Launch";
 import Footer from "./Footer";
 
-export default function main() {
+export default function Main() {
   return (
     <>
       <Hero />
