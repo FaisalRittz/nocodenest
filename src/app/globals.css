@@ -3,9 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  background: #f0ecec;
 }
 
-/* rest of your styles... */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -19,8 +19,6 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-
 
 @keyframes gradientShift {
   0% {
@@ -36,10 +34,92 @@ body {
   animation: gradientShift 5s ease-in-out infinite alternate;
 }
 
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.scrollbar::-webkit-scrollbar {
-  display: none;
+@layer utilities {
+  @media (min-width: 990px) and (max-width: 1024px) {
+    .between990\:top-20rem {
+      top: 8rem;
+    }
+
+    .between990\:leading-\[5rem\] {
+      line-height: 6rem;
+    }
+
+    .between990\:text-\[3\.2rem\] {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+@layer utilities {
+  @media (min-width: 830px) and (max-width: 979px) {
+    .at-830-979\:top-40 {
+      top: 39% !important;
+    }
+    .at-830-979\:bottom-40 {
+      bottom: 5% !important;
+    }
+
+    .at-830-979\:left-8 {
+      left: 32.5% !important;
+    }
+    .at-830-979\:right-8 {
+      right: 10.5% !important;
+    }
+    .at-830-979\:mt-12 {
+      margin-top: 0.7rem !important; 
+    }
+    .at-830-979\:ml-12 {
+      margin-left: 3.7rem !important; 
+    }
+
+    .at-830-979\:opacity-100 {
+      opacity: 1 !important;
+    }
+
+    .at-830-979\:width-145p {
+      width: 21% !important;
+    }
+  }
+}
+
+@layer utilities {
+  @media (min-width: 980px) and (max-width: 1279px) {
+    .at-980-1279\:width-15p {
+      width: 16.6% !important;
+    }
+    .at-980-1279\:top-40 {
+      top: 39% !important;
+    }
+    .at-980-1279\:top-44 {
+      top: 43% !important;
+    }
+    .img6-980-1279 {
+      top: 43% !important;
+    }
+    .img14-980-1279 {
+      width: 20.3% !important;
+      left: 39.9% !important;
+    }
+    .at-980-1279\:right-44 {
+      right: 20.9% !important;
+    }
+    .at-980-1279\:left-44 {
+      left: 31.9% !important;
+    }
+    
+    .at-980-1279\:ml-44 {
+      margin-left: 2.9% !important;
+    }
+    .at-980-1279\:mt-44 {
+      margin-top: 13.9% !important;
+    }
+  }
 }

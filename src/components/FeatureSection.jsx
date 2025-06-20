@@ -1,185 +1,169 @@
 "use client";
 import React from "react";
 
-const FeatureCard = ({ 
-  title, 
-  hoverTitle, 
-  imageSrc, 
-  width, 
-  isHovered, 
-  onMouseEnter, 
-  onMouseLeave 
-}) => (
-  <div
-    onMouseEnter={onMouseEnter}
-    onMouseLeave={onMouseLeave}
-    className={`border-3 border-amber-50 bg-transparent ${width} h-[23vh] rounded-3xl transition-shadow duration-300 ease-in-out ${
-      isHovered ? "shadow-[0_5px_10px_rgba(0,0,1,0.75)] shadow-emerald-400" : ""
-    }`}
-  >
-    <h4 className="pt-6 pl-4">
-      {isHovered ? hoverTitle : title}
-    </h4>
-    <div className={`h-20 w-20 ${width === 'w-[17vw]' ? 'ml-36' : 'ml-60'} bg-cover`}>
-      <img
-        src={imageSrc}
-        alt=""
-        className={`w-full h-full transition-all duration-200 ease-out ${
-          isHovered ? "scale-70 ml-6" : "scale-100"
-        }`}
-      />
-    </div>
-  </div>
-);
-
 export default function FeatureSection() {
-  const [hoveredCard, setHoveredCard] = React.useState(null);
+  const [hoverStates, setHoverStates] = React.useState(Array(10).fill(false));
 
-  const features = [
+  const toggleHover = (index, val) => {
+    const newStates = [...hoverStates];
+    newStates[index] = val;
+    setHoverStates(newStates);
+  };
+
+  const cardsData = [
     {
-      id: 1,
       title: "Instant Storefront Creation",
-      hoverTitle: "Go live in minutes with just an Excel sheet.",
-      imageSrc: "/assets/creation.svg",
-      width: "w-[17vw]"
+      hoverText: "Go live in minutes with just an Excel sheet.",
+      image: "/assets/creation.svg",
+      customClass: "",
     },
     {
-      id: 2,
       title: "Drag & Drop Builder",
-      hoverTitle: "Easily design pages—no coding needed",
-      imageSrc: "/assets/drag.svg",
-      width: "w-[23vw]"
+      hoverText: "Easily design pages—no coding needed",
+      image: "/assets/drag.svg",
+      customClass: "",
     },
     {
-      id: 3,
       title: "AI Powered Chatbot",
-      hoverTitle: "Smart, built-in AI for sales & support.",
-      imageSrc: "/assets/chatbot.svg",
-      width: "w-[23vw]"
+      hoverText: "Smart, built-in AI for sales & support.",
+      image: "/assets/chatbot.svg",
+      customClass: "",
     },
     {
-      id: 4,
       title: "3D Product Viewer",
-      hoverTitle: "Let customers explore products in 3D.",
-      imageSrc: "/assets/3d.svg",
-      width: "w-[17vw]"
+      hoverText: "Let customers explore products in 3D.",
+      image: "/assets/3d.svg",
+      customClass: "",
     },
     {
-      id: 5,
       title: "Industry-Specific Dashboards",
-      hoverTitle: "Tailored analytics for your business type.",
-      imageSrc: "/assets/dashboard.svg",
-      width: "w-[17vw]"
+      hoverText: "Tailored analytics for your business type.",
+      image: "/assets/dashboard.svg",
+      customClass: "",
     },
     {
-      id: 6,
       title: "Role-Based Access",
-      hoverTitle: "Control what each user can view or edit.",
-      imageSrc: "/assets/role.svg",
-      width: "w-[17vw]"
+      hoverText: "Control what each user can view or edit.",
+      image: "/assets/role.svg",
+      customClass: "",
     },
     {
-      id: 7,
       title: "Visual Commerce Tools",
-      hoverTitle: "Reels, video, and popup banners included.",
-      imageSrc: "/assets/visual.svg",
-      width: "w-[17vw]"
+      hoverText: "Reels, video, and popup banners included.",
+      image: "/assets/visual.svg",
+      customClass: "",
     },
     {
-      id: 8,
       title: "Bulk Excel Upload",
-      hoverTitle: "Add thousands of products instantly",
-      imageSrc: "/assets/bulk.svg",
-      width: "w-[23vw]"
+      hoverText: "Add thousands of products instantly",
+      image: "/assets/bulk.svg",
+      customClass: "",
     },
     {
-      id: 9,
       title: "Auto-Price Engine",
-      hoverTitle: "Real-time price logic for metals, grades.",
-      imageSrc: "/assets/autoprice.svg",
-      width: "w-[23vw]"
+      hoverText: "Real-time price logic for metals, grades.",
+      image: "/assets/autoprice.svg",
+      customClass: "",
     },
     {
-      id: 10,
       title: "Built-In SEO Management",
-      hoverTitle: "Boost visibility with native SEO tools.",
-      imageSrc: "/assets/seo.svg",
-      width: "w-[17vw]"
-    }
+      hoverText: "Boost visibility with native SEO tools.",
+      image: "/assets/seo.svg",
+      customClass: "",
+    },
   ];
 
   return (
-    <div className="bg-[#f5f7fa] flex items-center justify-center h-screen w-full">
-      <div className="bg-[#0a0d11] text-white font-bold flex flex-col items-center justify-center w-[90%] h-[90%] rounded-3xl">
-        <div className="flex flex-row items-center justify-between w-full h-full p-6">
-          {features.slice(0, 4).map((feature) => (
+    <div className="bg-[#f5f7fa] flex items-center justify-center min-h-screen w-full px-2 sm:px-4 py-4">
+      <div className="bg-[#0a0d11] text-white font-bold flex flex-col items-center justify-center w-full max-w-[1300px] rounded-3xl p-2 sm:p-4 xl:p-7 md:p-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full">
+          {cardsData.slice(0, 4).map((card, i) => (
             <FeatureCard
-              key={feature.id}
-              title={feature.title}
-              hoverTitle={feature.hoverTitle}
-              imageSrc={feature.imageSrc}
-              width={feature.width}
-              isHovered={hoveredCard === feature.id}
-              onMouseEnter={() => setHoveredCard(feature.id)}
-              onMouseLeave={() => setHoveredCard(null)}
+              key={i}
+              {...card}
+              isHovered={hoverStates[i]}
+              setIsHovered={(val) => toggleHover(i, val)}
             />
           ))}
         </div>
-        <div className="flex flex-row items-center justify-between w-full h-full p-6">
-          {features.slice(4, 5).map((feature) => (
+
+        <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-4 sm:gap-6 my-4">
+          <div className="w-full lg:w-1/4 flex justify-center">
             <FeatureCard
-              key={feature.id}
-              title={feature.title}
-              hoverTitle={feature.hoverTitle}
-              imageSrc={feature.imageSrc}
-              width={feature.width}
-              isHovered={hoveredCard === feature.id}
-              onMouseEnter={() => setHoveredCard(feature.id)}
-              onMouseLeave={() => setHoveredCard(null)}
+              {...cardsData[4]}
+              isHovered={hoverStates[4]}
+              setIsHovered={(val) => toggleHover(4, val)}
             />
-          ))}
-          <div className="flex flex-row items-center">
-            <div className="flex flex-col">
-              <div className="w-[13vw] h-[1px] bg-white" />
-            </div>
-            <h1 
-              className="text-7xl bg-gradient-to-r from-green-700 via-emerald-800 to-black bg-clip-text text-transparent animate-gradient"
+          </div>
+
+          <div className="relative flex flex-col items-center justify-center w-full lg:w-2/4 my-4 lg:my-0">
+            <h1
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-green-700 via-emerald-800 to-black bg-clip-text text-transparent animate-gradient text-center z-10"
               style={{
-                WebkitTextStroke: '1px white',
-                WebkitTextFillColor: 'transparent',
+                WebkitTextStroke: "1px white",
+                WebkitTextFillColor: "transparent",
               }}
             >
               FEATURES
             </h1>
-            <div className="w-[13vw] h-[1px] bg-white" />
           </div>
-          {features.slice(5, 6).map((feature) => (
+
+          <div className="w-full lg:w-1/4 flex justify-center">
             <FeatureCard
-              key={feature.id}
-              title={feature.title}
-              hoverTitle={feature.hoverTitle}
-              imageSrc={feature.imageSrc}
-              width={feature.width}
-              isHovered={hoveredCard === feature.id}
-              onMouseEnter={() => setHoveredCard(feature.id)}
-              onMouseLeave={() => setHoveredCard(null)}
+              {...cardsData[5]}
+              isHovered={hoverStates[5]}
+              setIsHovered={(val) => toggleHover(5, val)}
             />
-          ))}
+          </div>
         </div>
-        <div className="flex flex-row items-center justify-between w-full h-full p-6">
-          {features.slice(6).map((feature) => (
-            <FeatureCard
-              key={feature.id}
-              title={feature.title}
-              hoverTitle={feature.hoverTitle}
-              imageSrc={feature.imageSrc}
-              width={feature.width}
-              isHovered={hoveredCard === feature.id}
-              onMouseEnter={() => setHoveredCard(feature.id)}
-              onMouseLeave={() => setHoveredCard(null)}
-            />
-          ))}
+
+        <div className="w-full flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-[1300px] w-full">
+            {cardsData.slice(6, 10).map((card, idx) => {
+              const actualIndex = 6 + idx;
+              return (
+                <FeatureCard
+                  key={actualIndex}
+                  {...card}
+                  isHovered={hoverStates[actualIndex]}
+                  setIsHovered={(val) => toggleHover(actualIndex, val)}
+                />
+              );
+            })}
+          </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function FeatureCard({
+  title,
+  hoverText,
+  image,
+  isHovered,
+  setIsHovered,
+  customClass,
+}) {
+  return (
+    <div
+      className={`border-3 border-white bg-transparent ${customClass} rounded-2xl p-3 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:shadow-emerald-400 transform ${
+        isHovered ? "scale-105" : "scale-100"
+      } w-full min-h-[180px] sm:min-h-[210px] md:min-h-[230px] max-w-full sm:max-w-[260px] md:max-w-[320px]`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold mb-2 text-center">
+        {isHovered ? hoverText : title}
+      </div>
+      <div className="h-[40px] sm:h-[50px] md:h-[60px] lg:h-[80px] w-auto mx-auto flex items-center justify-center">
+        <img
+          src={image}
+          alt={title}
+          className={`h-full w-auto transition-transform duration-300 ${
+            isHovered ? "scale-90" : "scale-100"
+          }`}
+        />
       </div>
     </div>
   );
